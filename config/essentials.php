@@ -37,6 +37,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Enforce Morph Map
+    |--------------------------------------------------------------------------
+    |
+    | This option allows you to enforce a morph map for your polymorphic
+    | relationships. When enabled, every polymorphic model must be
+    | registered in a morph map instead of using its class name.
+    |
+    | Enabled by default.
+    |
+    */
+
+    NunoMaduro\Essentials\Configurables\EnforceMorphMap::class => true,
+
+    /*
+    |--------------------------------------------------------------------------
     | Fake Sleep when running tests
     |--------------------------------------------------------------------------
     |

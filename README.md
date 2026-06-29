@@ -42,6 +42,7 @@ php artisan vendor:publish --tag=essentials-config
 ## Table of Contents
 - [Strict Models](#-strict-models)
 - [Auto Eager Loading](#-auto-eager-loading)
+- [Enforce Morph Map](#-enforce-morph-map)
 - [Optional Unguarded Models](#-optional-unguarded-models)
 - [Immutable Dates](#-immutable-dates)
 - [Force HTTPS](#-force-https)
@@ -71,6 +72,14 @@ Improves how Eloquent handles undefined attributes, lazy loading, and invalid as
 Automatically eager loads relationships defined in the model's `$with` property.
 
 **Why:** Reduces N+1 query issues and improves performance without needing `with()` everywhere.
+
+---
+
+### 🗺️ Enforce Morph Map
+
+Requires every polymorphic model to be registered in a morph map instead of storing its fully-qualified class name in the database.
+
+**Why:** Decouples your database from your application's class structure, so you can rename or move models without breaking existing polymorphic relationships.
 
 ---
 
